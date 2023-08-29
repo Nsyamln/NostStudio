@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Navigate, useNavigate, useOutletContext } from "react-router-dom";
+import {
+  Link,
+  Navigate,
+  useNavigate,
+  useOutletContext,
+} from "react-router-dom";
 import { api } from "../utils";
 
 const colors = {
@@ -18,7 +23,6 @@ export default function Login() {
   const [user, setUser] = useOutletContext();
 
   if (user) {
-    console.log("abc");
     return (
       <main className="flex items-start py-20 px-20 gap-16 justify-center">
         <div className="relative w-1/2 h-full flex flex-col py-28">
@@ -42,9 +46,8 @@ export default function Login() {
                 const user = await userResponse.json();
                 console.log(user);
                 setUser(user);
-                // const message = await response.text();
+
                 navigate("/");
-                // alert(message);
               }
             } else {
               const message = await response.text();
@@ -76,12 +79,12 @@ export default function Login() {
           />
 
           <div className="w-full flex justify-between gap-10 my-4">
-            <button
-              type="button"
+            <Link
+              to="/register"
               className="w-full text-[#060606] font-semibold bg-col3   rounded-md my-2 p-4 text-center flex items-center justify-center cursor-pointer"
             >
-              Buat akun
-            </button>
+              <button type="button">Buat akun</button>
+            </Link>
             <button className="w-full text-[#060606] font-semibold bg-col3   rounded-md my-2 p-4 text-center flex items-center justify-center cursor-pointer">
               Login
             </button>

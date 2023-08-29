@@ -136,10 +136,6 @@ export default function Cart() {
         </div>
       </div>
 
-      {/* <Button onClick={() => setIsCartOpen(true)}>
-        <BsFillCartPlusFill /> {cart.reduce((a, p) => a + p.count, 0)}
-      </Button> */}
-
       {isCheckout && (
         <div>
           <h1>Checkout</h1>

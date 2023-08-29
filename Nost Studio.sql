@@ -51,6 +51,9 @@ INSERT INTO products VALUES
 (default,'Philips AQ6408','https://walkman.land/pics/model/philips/aq6408/_feat.jpg',330000,2,'Walkman only','Kondisinya masih mulus'),
 (default,'Toshiba KT-V890','https://walkman.land/pics/model/toshiba/kt-v890/_feat.jpg',250000,2,'Walkman only','Kondisinya masih mulus'),
 (default,'Sony WM-BF40','https://walkman.land/pics/model/sony/wm-bf40/_feat.jpg',228000,2,'Walkman only','Kondisinya masih mulus')
+(default,'Sony WM-RX77','https://p-id.ipricegroup.com/8c524931f0e3b1253775cfe6ad26b97cd31ebfb5_0.jpg',899000,2,'Camera only','Kondisinya masih mulus'),
+(default,'Olympus Analog Trip 35','https://p-id.ipricegroup.com/3d90b350d1c23cc28c433aef6aaa1915aaa24c88_0.jpg',489000,2,'Camera only','Kondisinya masih mulus'),
+(default,'Pentax K 1000','https://p-id.ipricegroup.com/cfc9be110442d3c59c4cb9ab9e5eb908559496bc_0.jpg',999999,2,'Walkman only','Kondisinya masih mulus'),
 
 
 INSERT INTO users VALUES 

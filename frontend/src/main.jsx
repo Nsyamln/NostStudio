@@ -12,6 +12,7 @@ import Dashbord from "./pages/Dashbord.jsx";
 import Catalog from "./pages/Catalog.jsx";
 import Setting from "./pages/Setting.jsx";
 import Logout from "./pages/Logout.jsx";
+import EditProduct from "./pages/EditProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/setting",
         element: <Setting />,
+      },
+      {
+        path: "/editproduct",
+        element: <EditProduct />,
       },
     ],
   },

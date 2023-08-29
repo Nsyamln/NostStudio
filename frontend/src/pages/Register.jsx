@@ -1,8 +1,4 @@
-const colors = {
-  primary: "#060606",
-  background: "#E0E0E0",
-  disabled: "#D9D9D9",
-};
+import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
@@ -10,7 +6,7 @@ export default function Register() {
       <div className="w-1/2  bg-[#F5F5F5] rounded-xl flex flex-col p-16 justify-between items-center">
         <div className="w-full flex flex-col  max-w-[500px] ">
           <div className="w-full flex flex-col mb-2">
-            <h3 className="text-2xl font-semibold mb-2">SigUp</h3>
+            <h3 className="text-2xl font-semibold mb-2">Sign Up</h3>
             <p className="text-sm mb-2">
               Kami menghormati privasi Anda. Informasi yang Anda berikan hanya
               akan digunakan untuk keperluan akun Anda
@@ -60,40 +56,19 @@ export default function Register() {
                 kami.
               </p>
             </div>
-
-            {/* <p className="text-sm font-medium whitespace-nowrap cursor-pointer underline underline-offset-2">
-              Forgot Password ?
-            </p> */}
           </div>
 
           <div className="w-full flex flex-col my-4">
             <button className="w-full bg-[#171313] font-semibold rounded-md my-2 p-4 text-center flex items-center justify-center text-white cursor-pointer">
               Simpan
             </button>
-            <button className="w-full text-[#060606] font-semibold bg-white border border-black rounded-md my-2 p-4 text-center flex items-center justify-center cursor-pointer">
-              Batal
-            </button>
+            <Link to="/login">
+              <button className="w-full text-[#060606] font-semibold bg-white border border-black rounded-md my-2 p-4 text-center flex items-center justify-center cursor-pointer">
+                Batal
+              </button>
+            </Link>
           </div>
-
-          {/* <div className="w-full flex items-center justify-center relative py-2 ">
-            <div className="w-full h-[1px] bg-black"></div>
-            <p className="text-lg absolute text-black/80 bg-[#F5F5F5]">or</p>
-          </div> */}
-
-          {/* <div className="w-full text-[#060606] font-semibold bg-white border border-black/40 rounded-md my-2 p-4 text-center flex items-center justify-center cursor-pointer ">
-            <img src="/logo-google.png" className=" h-6 mr-2" />
-            Sign In with Google
-          </div> */}
         </div>
-
-        {/* <div className="w-full flex items-start justify-center ">
-          <p className="text-sm font-normal text-[#060606]">
-            Dont have a account?{" "}
-            <span className="font-semibold underline underline-offset-2 cursor-pointer">
-              Sign Up for free
-            </span>
-          </p>
-        </div> */}
       </div>
 
       <div className="relative w-1/2 h-full flex flex-col  py-28">

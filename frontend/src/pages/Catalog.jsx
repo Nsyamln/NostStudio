@@ -8,7 +8,6 @@ import IconButton from "../components/IconButton";
 
 export default function Catalog() {
   const [products, setProducts] = useState([]);
-  const [keyword, setKeyword] = useState("");
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -29,19 +28,12 @@ export default function Catalog() {
   if (user) {
     return (
       <div className="flex flex-col m-2">
-        <header className=" bg-col3 h-16 flex justify-evenly  rounded-lg  items-center m-4">
-          <label className="m-5 ">
-            Cari :
-            <input
-              type="text"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-            />
-          </label>
+        <header className=" bg-col3 h-16 flex justify-between pr-8 rounded-lg  items-center m-4">
+          <h1 className="text-2xl pl-5">Catalog Produk</h1>
 
           <IconButton onClick={() => setIsCartOpen(true)}>
-            <FiShoppingCart />
             {cart.reduce((a, p) => a + p.count, 0)}
+            <FiShoppingCart />
           </IconButton>
         </header>
         <div className="flex flex-wrap m-4 gap-5">
@@ -61,19 +53,21 @@ export default function Catalog() {
                 <div className="flex px-4  justify-between">
                   <button
                     onClick={() => {
-                      <div className="bg-panacotta absolute flex flex-col gap-2 p-6 text-center rounded-xl top-2/4 left-2/4 min-w-[500px]">
-                        <h1>Kelengkapan :</h1>
-                        <p>{product.completeness}</p>
-                        <h1>Deskripsi:</h1>
-                        <p>{product.description}</p>
-                      </div>;
+                      return (
+                        <div className="bg-panacotta absolute flex flex-col gap-2 p-6 text-center rounded-xl top-2/4 left-2/4 min-w-[500px]">
+                          <h1>Kelengkapan :</h1>
+                          <p>{product.completeness}</p>
+                          <h1>Deskripsi:</h1>
+                          <p>{product.description}</p>
+                        </div>
+                      );
                     }}
-                    className="bg-panacotta w-10 flex items-center justify-center h-10 rounded-lg "
+                    className="bg-panacotta w-10 flex items-center justify-center h-8 rounded-lg "
                   >
                     <AiOutlineEye size={20} />
                   </button>
                   <IconButton
-                    className="bg-panacotta w-10 flex items-center justify-center h-10 rounded-lg"
+                    className="bg-panacotta w-10 flex items-center justify-center h-8 rounded-lg"
                     onClick={() => {
                       if (cart.find((p) => p.id === product.id)) {
                         setCart(
@@ -166,7 +160,15 @@ export default function Catalog() {
                   currency: "IDR",
                   maximumFractionDigits: 0,
                 })}
-              <button className="w-20 h-10 bg-col2 rounded-lg">Bayar</button>
+              <button
+                className="w-20 h-10 bg-col2 rounded-lg"
+                onClick={() => {
+                  setCart([]);
+                  alert("Transaksi Berhasil!");
+                }}
+              >
+                Bayar
+              </button>
             </div>
           </div>
         )}

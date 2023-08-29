@@ -5,11 +5,14 @@ export default function Home() {
   console.log(user);
   if (user) {
     return (
-      <div className=" flex flex-col items-center p-28">
-        <h1>Selamat Datang , selamat Berbelanja</h1>
+      <div className=" flex flex-col items-center py-14 px-60">
+        <h1 className="text-3xl font-semibold">
+          Selamat Datang , selamat Berbelanja
+        </h1>
+        <br />
         <img
           src="./undraw_add_to_cart_re_wrdo.svg"
-          className="max-w-[600px]  object-cover"
+          className="max-w-[700px]  object-cover"
         />
       </div>
     );

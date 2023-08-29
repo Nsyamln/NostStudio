@@ -14,7 +14,7 @@ const Sidebar = () => {
       link: "/dashbord",
       icon: MdOutlineDashboard,
     },
-    { name: "My Profile", link: "/myprofile", icon: AiOutlineUser },
+    // { name: "My Profile", link: "/myprofile", icon: AiOutlineUser },
     { name: "Catalog", link: "/catalog", icon: GrCatalog },
     { name: "Setting", link: "/setting", icon: RiSettings4Line },
     { name: "Logout", link: "/logout", icon: BiLogOut },
@@ -69,13 +69,6 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-      {/* {isLogout && (
-        <div>
-          <h1>Yakin ingin Logout?</h1>
-          <button onClick={() => handleLogout()}>Ya</button>
-          <button>Tidak</button>
-        </div>
-      )} */}
     </section>
   );
 };
