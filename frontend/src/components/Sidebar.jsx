@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
@@ -8,8 +8,6 @@ import { BiLogOut } from "react-icons/bi";
 import { GrCatalog } from "react-icons/gr";
 
 const Sidebar = () => {
-  const [isLogout, setIsLogout] = useState(false);
-  const handleLogout = () => {};
   const menus = [
     {
       name: "dashboard",
@@ -22,6 +20,7 @@ const Sidebar = () => {
     { name: "Logout", link: "/logout", icon: BiLogOut },
   ];
   const [open, setOpen] = useState(true);
+
   return (
     <section className="flex gap-6">
       <div

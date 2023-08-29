@@ -33,9 +33,7 @@ export default function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="flex">
         <Sidebar />
-        <div
-          className={theme === "light" ? "bg-col4 text-white" : "bg-gray-100"}
-        >
+        <div className={theme === "light" ? "bg-white" : "bg-col4 text-white"}>
           <Outlet context={[user, setUser]} />
         </div>
       </div>

@@ -6,7 +6,7 @@ CREATE OR REPLACE TABLE products(
 	name_product VARCHAR(32) NOT NULL,
 	image VARCHAR(100) NOT NULL,
 	price INT NOT NULL,
-	stock INT NOT NULL,
+	stock INT NOT NULL, 
 	completeness TEXT NOT NULL,
 	description VARCHAR(255) NOT NULL
 	);
