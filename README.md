@@ -22,7 +22,7 @@ NoStudio adalah sebuah **store vintage's stuff** yang menjual barang - barang ja
 
 # ERD
 
-![Gambar ERD NoStudio]("ERD.png")
+![Gambar ERD NoStudio](ERD.png)
 
 # Tech Stack
 
