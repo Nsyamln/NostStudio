@@ -15,7 +15,7 @@ CREATE OR REPLACE TABLE users(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	name VARCHAR(25) NOT NULL,
 	email VARCHAR(50) NOT NULL,
-	password VARCHAR(25) NOT NULL,
+	password TEXT NOT NULL,
 	role VARCHAR (5),
 	address VARCHAR (100),
 	phone_number CHAR(13)
@@ -27,7 +27,6 @@ CREATE OR REPLACE TABLE sales(
 	sales_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	product_id INT NOT NULL,
 	user_id INT NOT NULL,
-	date DATETIME, 
 	qty INT,
 	
 	 CONSTRAINT fk_sales1 FOREIGN KEY  (product_id) REFERENCES products (id),

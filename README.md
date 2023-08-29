@@ -16,10 +16,13 @@ NoStudio adalah sebuah **store vintage's stuff** yang menjual barang - barang ja
 ### User
 
 - Login
+- Kelola Data User
 - Melihat Catalog
 - Beli Barang
 
 # ERD
+
+![Gambar ERD NoStudio]("ERD.png")
 
 # Tech Stack
 
